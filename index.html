@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<html>
+<head>
+  <title>JavaScript Test</title>
+</head>
+<body>
+  <h1>Open the Console to See Output</h1>
+  <script>
+    // Step 1
+    var customerName = 'bob';
 
-    <title>JavaScript Arithmetic Lab</title>
-    <meta name="description" content="Introduction to JavaScript numbers and arithmetic in the Learn.co curriculum">
-    <meta name="author" content="Flatiron School">
+    // Step 2
+    function upperCaseCustomerName() {
+      customerName = customerName.toUpperCase();
+      console.log('customerName:', customerName);
+    }
 
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
-  </head>
+    // Step 3
+    function setBestCustomer() {
+      bestCustomer = 'not bob';
+      console.log('bestCustomer:', bestCustomer);
+    }
 
-  <body>
-    <!-- <div> for Mocha to display test results. -->
-    <div id="mocha"></div>
+    // Step 4
+    function overwriteBestCustomer() {
+      bestCustomer = 'maybe bob';
+      console.log('bestCustomer:', bestCustomer);
+    }
 
-    <!-- Include Mocha and set it up for BDD-style testing. -->
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
+    // Step 5
+    const leastFavoriteCustomer = 'nancy';
 
-    <!-- Include Chai as the matcher library. -->
-    <script src="node_modules/chai/chai.js"></script>
+    // Step 6
+    function changeLeastFavoriteCustomer() {
+      leastFavoriteCustomer = 'john'; // This will throw an error
+    }
 
-    <!-- Include Sinon as the library for spies, stubs, and mocks. -->
-    <script src="node_modules/sinon/pkg/sinon.js"></script>
-
-    <!-- Include some test fixtures. -->
-    <script src="test/fixtures/testFixtures.js"></script>
-
-    <!-- Include the student's JavaScript file. -->
-    <script src="index.js"></script>
-
-    <!-- Include the JavaScript file(s) containing the tests. -->
-    <script src="test/indexTest.js"></script>
-
-    <!-- Include Flatiron School's minified test runner to push results to Learn. -->
-    <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
-  </body>
+    // Try calling some functions:
+    upperCaseCustomerName();       // Should show 'BOB'
+    setBestCustomer();             // Should show 'not bob'
+    overwriteBestCustomer();       // Should show 'maybe bob'
+    // changeLeastFavoriteCustomer(); // Uncomment to see error
+  </script>
+</body>
 </html>
